@@ -1,6 +1,31 @@
-{% if page.title and page.url != "/" and page.path != "index.md" %}
-{{ page.title }}
-{% endif %} {{ content }} {% unless page.url == "/" or page.path == "index.md" %}
-{{ page.date-created }}
-← Back to Home
-{% endunless %}
+<!doctype html>
+<html
+  lang="{{ page.lang | default: 'ar' }}"
+  dir="{{ page.direction | default: 'auto' }}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <div id="content-wrapper" dir="{{ page.direction | default: 'ltr' }}">
+        
+        {% if page.title and page.url != "/" and page.path != "index.md" %}
+        <h1>{{ page.title }}</h1>
+        {% endif %} {{ content }} {% unless page.url == "/" or page.path ==
+        "index.md" %}
+        <h6>{{ page.date-created }}</h6>
+        <div dir="ltr" style="margin-top: 2rem">
+          <a href="{{ '/' | relative_url }}" class="back-button">← Back to Home</a>
+        </div>
+        {% endunless %}
+      </div>
+    </div>
+  </body>
+</html>
