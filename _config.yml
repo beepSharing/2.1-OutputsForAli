@@ -1,0 +1,15 @@
+theme: jekyll-theme-primer
+
+defaults:
+  - scope:
+      path: "" # This means all files in the project
+    values:
+      layout: "default"
+# url: "https://thoughts.m-albishri.me"
+# baseurl: ""
+
+# Collections for notes - prefer using a collection for consistent note handling
+collections:
+  notes:
+    output: true
+    permalink: /:collection/:path/
