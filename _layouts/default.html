@@ -1,0 +1,6 @@
+{% if page.title and page.url != "/" and page.path != "index.md" %}
+{{ page.title }}
+{% endif %} {{ content }} {% unless page.url == "/" or page.path == "index.md" %}
+{{ page.date-created }}
+← Back to Home
+{% endunless %}
