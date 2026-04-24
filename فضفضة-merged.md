@@ -1,3 +1,10 @@
+---
+layout: default
+fileName: فضفضة-merged
+direction: "rtl"
+title: "خاص جداً"
+date-created: 2023-04-01
+---
 #### 🔟 فضفضة
 
 #ToMe❤️ 
